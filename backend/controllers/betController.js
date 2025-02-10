@@ -1,4 +1,5 @@
 // backend/controllers/betController.js
+require('dotenv').config();
 const { Bet } = require('../models');
 const telegramService = require('../services/telegramService');
 

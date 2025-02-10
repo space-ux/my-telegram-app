@@ -1,4 +1,6 @@
 // backend/services/telegramService.js
+require('dotenv').config();
+
 const TelegramBot = require('node-telegram-bot-api');
 const config = require('config');
 

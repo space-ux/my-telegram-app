@@ -1,5 +1,7 @@
 // backend/bot.js
 const telegramService = require('./services/telegramService');
+require('dotenv').config();
+
 
 function startBot() {
   console.log('Запуск Telegram-бота...');

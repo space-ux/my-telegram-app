@@ -1,4 +1,5 @@
 // backend/services/rateService.js
+require('dotenv').config();
 const axios = require('axios');
 const xml2js = require('xml2js');
 

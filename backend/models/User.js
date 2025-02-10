@@ -1,4 +1,5 @@
 // backend/models/User.js
+require('dotenv').config();
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {

@@ -1,0 +1,10 @@
+# Игнорировать папку node_modules
+node_modules/
+
+# Игнорировать файлы, содержащие секреты
+.env
+config/default.json   # Если он содержит реальные ключи. Либо переименуйте его в config/default.secret.json и исключите его.
+
+# Личные файлы IDE и прочее
+.DS_Store
+*.log

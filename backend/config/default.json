@@ -1,15 +1,14 @@
 {
-    "telegram": {
-      "botToken": "8169282323:AAGJK_z1gYroxfoWIQCKvvDP3CCx11-eRlU",
-      "chatId": "719264431"
-    },
-    "database": {
-      "dialect": "sqlite",
-      "storage": "database.sqlite"
-    },
-    "tmaWallet": {
-      "apiUrl": "https://api.tmawallet.example.com",
-      "apiKey": "3e3c4552cc8535e2"
-    }
+  "telegram": {
+    "botToken": "${TELEGRAM_BOT_TOKEN}",
+    "chatId": "${TELEGRAM_CHAT_ID}"
+  },
+  "database": {
+    "dialect": "${DATABASE_DIALECT}",
+    "storage": "${DATABASE_STORAGE}"
+  },
+  "tmaWallet": {
+    "apiKey": "${TMA_API_KEY}",
+    "apiUrl": "https://api.tmawallet.example.com"
   }
-  
+}

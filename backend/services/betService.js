@@ -1,4 +1,5 @@
 // backend/services/betService.js
+require('dotenv').config();
 const { Bet, User } = require('../models');
 const { sendTelegramNotification } = require('./telegramService');
 

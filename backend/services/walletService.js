@@ -1,5 +1,7 @@
 // backend/services/walletService.js
+require('dotenv').config();
 const telegramService = require('./telegramService');
+
 
 async function handleWalletWebhook(req, res) {
   try {
