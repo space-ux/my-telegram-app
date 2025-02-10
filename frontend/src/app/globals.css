@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Глобальные стили --- */
+@layer base {
+  body {
+    @apply bg-blue-900 text-white;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Убираем стрелки number inputs */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* --- Радужная рамка --- */
+@layer components {
+  .rainbow-border {
+    @apply relative;
+  }
+  .rainbow-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      45deg,
+      #7a00ff
+    );
+    border-radius: inherit;
+    z-index: -1;
+    filter: blur(5px);
+    animation: rainbow 20s linear infinite;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
