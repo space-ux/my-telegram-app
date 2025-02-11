@@ -1,14 +1,14 @@
 {
+  "database": {
+    "dialect": "sqlite",
+    "storage": "database.sqlite"
+  },
   "telegram": {
     "botToken": "${TELEGRAM_BOT_TOKEN}",
     "chatId": "${TELEGRAM_CHAT_ID}"
   },
-  "database": {
-    "dialect": "${DATABASE_DIALECT}",
-    "storage": "${DATABASE_STORAGE}"
-  },
   "tmaWallet": {
-    "apiKey": "${TMA_API_KEY}",
-    "apiUrl": "https://api.tmawallet.example.com"
+    "apiUrl": "https://api.tmawallet.example.com",
+    "apiKey": "${TMA_API_KEY}"
   }
 }

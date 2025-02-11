@@ -7,8 +7,7 @@ import { Button } from "./components/ui/button";
 import DynamicRate from "./components/DynamicRate";
 import BetBar from "./components/BetBar";
 import BetModal from "./components/BetModal";
-import BalanceButton from "./components/BalanceButton"; 
-import WalletPopup from "./components/WalletPopup"; 
+import WalletPopup from "./components/WalletPopup";
 
 export default function Page() {
   const [balance, setBalance] = useState(100);
@@ -39,11 +38,13 @@ export default function Page() {
   };
 
   return (
-    <div className="relative">
-      {/* Кнопка баланса в правом верхнем углу */}
+    // Внешний контейнер занимает 100vh и запрещает скроллинг
+    <div className="relative h-screen overflow-hidden">
+      {/* Кнопка кошелька в правом верхнем углу */}
       <WalletPopup />
 
-      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      {/* Основной контент отцентрирован по вертикали и горизонтали */}
+      <div className="flex flex-col items-center justify-center h-full p-4">
         {/* Заголовок */}
         <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-100 via-blue-200 to-purple-300 animate-pulse">
           RateBattle
@@ -55,13 +56,13 @@ export default function Page() {
           <BetBar upAmount={upAmount} downAmount={downAmount} />
           <div className="flex justify-center gap-4 sm:gap-6 w-full">
             <Button
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-2xl sm:text-3xl transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg flex-1"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-2xl sm:text-3xl transition-transform duration-300 transform hover:scale-105 shadow-lg flex-1"
               onClick={() => handleOpenBetModal("up")}
             >
               ▲
             </Button>
             <Button
-              className="bg-red-500 hover:bg-red-600 text-white font-bold py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-2xl sm:text-3xl transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg flex-1"
+              className="bg-red-500 hover:bg-red-600 text-white font-bold py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-2xl sm:text-3xl transition-transform duration-300 transform hover:scale-105 shadow-lg flex-1"
               onClick={() => handleOpenBetModal("down")}
             >
               ▼

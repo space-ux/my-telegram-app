@@ -1,4 +1,4 @@
-// server.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -10,7 +10,7 @@ const app = express();
 const PORT = 4000;
 
 // Разрешаем CORS для всех источников
-app.use(cors({ origin: '*' }));
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use('/api', apiRoutes);
