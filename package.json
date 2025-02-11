@@ -1,20 +1,13 @@
 {
   "name": "tgv2",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev:backend": "cd backend && node server.js",
     "dev:frontend": "cd frontend && npm run dev",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "concurrently": "^9.1.2"
-  },
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "concurrently": "^7.6.0"
   }
 }
