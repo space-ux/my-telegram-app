@@ -28,7 +28,7 @@ export default function BetModal({
       return;
     }
     try {
-      const resp = await fetch("http://localhost:4000/api/createBetInvoice", {
+      const resp = await fetch("https://my-telegram-app-pnaw.onrender.com/api/createBetInvoice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ direction, userAmount }),

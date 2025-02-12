@@ -15,7 +15,7 @@ export default function DynamicRate({ onRateChange }: DynamicRateProps) {
   useEffect(() => {
     async function fetchRate() {
       try {
-        const res = await fetch("http://localhost:4000/api/rate");
+        const res = await fetch("https://my-telegram-app-pnaw.onrender.com/");
         const data = await res.json();
         // Запоминаем старое значение курса, если оно уже установлено
         setPrevRate(rate);
